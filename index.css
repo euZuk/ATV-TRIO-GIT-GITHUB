@@ -6,7 +6,7 @@
 }
 
 .index {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/background-index.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('assets/background_index.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
