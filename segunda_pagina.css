@@ -1,0 +1,88 @@
+/* Reset padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização Geral do Body */
+body {
+    background-color: #0b0214; /* Roxo bem escuro de fundo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('background-wandinha.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 40px;
+}
+
+/* Menu de Navegação */
+.menu-navegacao {
+    background-color: rgba(13, 5, 23, 0.9);
+    border-bottom: 2px solid #4a154b;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu-navegacao a {
+    color: #a9a9b3;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-navegacao a:hover, 
+.menu-navegacao a.active {
+    color: #ae66ff; /* Roxo brilhante para destaque */
+    border-bottom: 2px solid #ae66ff;
+    padding-bottom: 5px;
+}
+
+/* Área de Conteúdo */
+.conteudo-principal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-pagina {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #e2d5f3;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Container e estilização da Imagem */
+.container-imagem {
+    margin-bottom: 25px;
+    border: 3px solid #3d1d6d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.imagem-serie {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Textos */
+.texto-descricao, 
+.texto-extra {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d1cbd6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
