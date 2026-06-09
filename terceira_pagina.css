@@ -1,0 +1,201 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E ANIMAÇÃO DO MUNDO INVERTIDO (BACKGROUND)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rowdies', sans-serif;
+    background: radial-gradient(circle at center, #15061c 0%, #07020d 60%, #000000 100%);
+    background-size: 200% 200%;
+    color: #ffffff;
+    overflow: hidden;
+    animation: atmosphericShift 12s ease infinite;
+}
+
+@keyframes atmosphericShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ==========================================================================
+   2. MENU DE NAVEGAÇÃO (NOVO)
+   ========================================================================== */
+.nav-menu {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    background: rgba(10, 5, 18, 0.6);
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+}
+
+.nav-menu a {
+    color: #a292a3;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Destaque para a página atual (active) e efeito de hover nos links */
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #e50914;
+    text-shadow: 0 0 10px #e50914, 0 0 20px #b30000;
+}
+
+/* ==========================================================================
+   3. ESPOROS FLUTUANTES (PARTÍCULAS)
+   ========================================================================== */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    animation: floatUp 15s infinite linear;
+}
+
+.particle:nth-child(1) { width: 5px; height: 5px; left: 10%; animation-duration: 10s; animation-delay: 0s; }
+.particle:nth-child(2) { width: 3px; height: 3px; left: 25%; animation-duration: 14s; animation-delay: 2s; }
+.particle:nth-child(3) { width: 6px; height: 6px; left: 45%; animation-duration: 11s; animation-delay: 5s; }
+.particle:nth-child(4) { width: 4px; height: 4px; left: 65%; animation-duration: 16s; animation-delay: 1s; }
+.particle:nth-child(5) { width: 7px; height: 7px; left: 80%; animation-duration: 13s; animation-delay: 7s; }
+.particle:nth-child(6) { width: 3px; height: 3px; left: 90%; animation-duration: 18s; animation-delay: 3s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(105vh) translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.5; }
+    100% { transform: translateY(-5vh) translateX(50px) rotate(360deg); opacity: 0; }
+}
+
+/* ==========================================================================
+   4. CONTEÚDO PRINCIPAL E LOGO EM NEON
+   ========================================================================== */
+.container {
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    margin-top: 60px; /* Espaço para não cobrir o menu */
+}
+
+.logo-box {
+    border: 4px solid #3a0000;
+    padding: 20px 40px;
+    display: inline-block;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.neon-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    color: #2b0303;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin: 0;
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+.logo-box:hover {
+    border-color: #e50914;
+    box-shadow: 0 0 15px #e50914, inset 0 0 15px #e50914;
+}
+
+.logo-box:hover .neon-title {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #e50914, 0 0 20px #e50914, 0 0 40px #e50914, 0 0 80px #b30000;
+    animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #e50914, 0 0 20px #e50914, 0 0 40px #e50914, 0 0 80px #b30000;
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        color: #3a0000;
+        opacity: 0.7;
+    }
+}
+
+.subtitle {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #a292a3;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.card {
+    margin-top: 40px;
+    background: rgba(10, 5, 18, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.card p {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #c9b6cc;
+    font-size: 0.95rem;
+}
+
+.btn-portal {
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #e50914;
+    color: #e50914;
+    padding: 10px 25px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-portal:hover {
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 0 15px #e50914;
+}
