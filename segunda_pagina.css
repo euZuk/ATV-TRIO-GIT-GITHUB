@@ -8,7 +8,7 @@
 /* Estilização Geral do Body */
 body {
     background-color: #0b0214; /* Roxo bem escuro de fundo */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('background-wandinha.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('assets/wandinha.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
