@@ -27,7 +27,7 @@ body {
 }
 
 /* ==========================================================================
-   2. MENU DE NAVEGAÇÃO (NOVO)
+   2. MENU DE NAVEGAÇÃO (ATUALIZADO)
    ========================================================================== */
 .nav-menu {
     position: absolute;
@@ -49,19 +49,19 @@ body {
 }
 
 .nav-menu a {
-    color: #a292a3;
+    color: #ffffff; /* Texto inicial em branco */
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
-/* Destaque para a página atual (active) e efeito de hover nos links */
-.nav-menu a:hover, 
+/* Transição suave para o vermelho neon ao passar o mouse */
+.nav-menu a:hover,
 .nav-menu a.active {
-    color: #e50914;
+    color: #e50914; 
     text-shadow: 0 0 10px #e50914, 0 0 20px #b30000;
 }
 
@@ -107,7 +107,7 @@ body {
     text-align: center;
     z-index: 2;
     padding: 20px;
-    margin-top: 60px; /* Espaço para não cobrir o menu */
+    margin-top: 60px;
 }
 
 .logo-box {
