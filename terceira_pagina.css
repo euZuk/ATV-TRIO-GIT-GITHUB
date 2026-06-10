@@ -14,7 +14,7 @@
    ========================================================================== */
 .nav-menu {
     position: absolute;
-    top: 20px;
+    top: -23px;
     width: 100%;
     text-align: center;
     z-index: 10;
@@ -142,8 +142,9 @@
     letter-spacing: 4px;
     color: #a292a3;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 300;'
 }
+
 
 .card {
     margin-top: 40px;
